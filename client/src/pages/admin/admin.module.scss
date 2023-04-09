@@ -1,0 +1,10 @@
+.admin {
+  width: 100vw;
+  height: 100vh;
+  background: url('../../assets/bg.png') repeat-y;
+  background-size: 100vw;
+  pointer-events: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

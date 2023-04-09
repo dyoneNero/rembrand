@@ -1,0 +1,51 @@
+.menu {
+  pointer-events: visible;
+  width: 100%;
+  height: 6vh;
+
+  background-color: rgba(0,0,0,0.4);
+  backdrop-filter: blur(3px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  font-size: 0.938vw;
+
+  z-index: 2;
+  color: white;
+
+  padding: 0px 40px;
+
+  div {
+    width: 50vw;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  div:last-child {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    button {
+      pointer-events: visible;
+      img{
+        width: 30px;
+      }
+    }
+  }
+}
+
+@media (max-width: 1450px) {
+  .menu {
+    width: 60vw;
+  }
+}
+
+@media (max-width: 1200px) {
+  .menu {
+    width: 70vw;
+  }
+}

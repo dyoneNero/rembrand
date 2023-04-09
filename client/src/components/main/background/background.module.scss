@@ -1,0 +1,21 @@
+.backgroundDiv {
+  width: 100vw;
+  height: 100vh;
+
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  background: url("../../../assets/bg.png") no-repeat 50% 50%;
+  background-size: 100% 100%;
+
+  pointer-events: none;
+
+  z-index: -2;
+}
+
+@media screen and (max-width: 1320px){
+  .backgroundDiv {
+    display: none;
+  }
+}

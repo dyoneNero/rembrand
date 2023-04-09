@@ -1,0 +1,50 @@
+.locationBlock {
+  width: 550px;
+  height: 525px;
+
+  padding: 20px 20px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  * {
+    font-size: 13px;
+    .ymaps-2-1-79-gototech {
+      display: none;
+    }
+  }
+}
+
+
+@media screen and (max-width: 1130px){
+  .locationBlock {
+    height: 500px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 600px){
+  .locationBlock {
+    width: 100%;
+    height: 500px;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 420px){
+  .locationBlock {
+    width: 100%;
+    height: 400px;
+    display: flex;
+  }
+}
+
+@media screen and (max-width: 325px){
+  .locationBlock {
+    width: 100%;
+    height: 300px;
+    display: flex;
+  }
+}

@@ -1,0 +1,69 @@
+.next-services {
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  color: black;
+  width: 50px;
+  height: 50px;
+  background: url('../../../assets/arrow.svg') no-repeat 50% 50% ;
+}
+
+.prev-services {
+  position: absolute;
+  top: 50%;
+  left: -70px;
+  color: black;
+  width: 50px;
+  height: 50px;
+  background: url('../../../assets/arrow.svg') no-repeat 50% 50%;
+  transform: rotate(180deg);
+}
+
+.disable-services {
+  display: none;
+}
+
+.next-stocks {
+  position: absolute;
+  top: 50%;
+  right: -70px;
+  color: black;
+  width: 50px;
+  height: 50px;
+  background: url('../../../assets/arrow.svg') no-repeat 50% 50% ;
+}
+
+.prev-stocks {
+  position: absolute;
+  top: 50%;
+  left: -70px;
+  color: black;
+  width: 50px;
+  height: 50px;
+  background: url('../../../assets/arrow.svg') no-repeat 50% 50%;
+  transform: rotate(180deg);
+}
+
+.disable-stocks {
+  display: none;
+}
+
+
+
+@media screen and (max-width: 1450px) {
+  .next-services {
+    display: none;
+  }
+
+  .prev-services {
+    display: none;
+  }
+
+  .next-stocks {
+    display: none;
+  }
+
+  .prev-stocks {
+    display: none;
+  }
+}

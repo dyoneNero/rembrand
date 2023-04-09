@@ -1,0 +1,35 @@
+{
+  "name": "Акции и скидки",
+  "type": "stocks",
+  "anchor": "stocks",
+  "swiperSettings": {
+    "spaceBetween": 20,
+    "navigation": {
+      "nextEl": ".next-stocks",
+      "prevEl": ".prev-stocks",
+      "disabledClass": "disable-stocks"
+    },
+    "breakpoints": {
+      "0": {
+        "slidesPerView": 1,
+        "slidesPerGroup": 1
+      },
+      "540": {
+        "slidesPerView": 2,
+        "slidesPerGroup": 2
+      },
+      "810": {
+        "slidesPerView": 3,
+        "slidesPerGroup": 3
+      },
+      "1080": {
+        "slidesPerView": 4,
+        "slidesPerGroup": 4
+      },
+      "1350": {
+        "slidesPerView": 5,
+        "slidesPerGroup": 5
+      }
+    }
+  }
+}

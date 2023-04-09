@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="favicon2.ico"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <link rel="stylesheet" href="">
+    <title> Rembrand </title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <div class="myreviews-widget-container">
+      <script src="https://myreviews.dev/widget/dist/index.js" defer></script>
+      <script defer>
+        var myReviewsInit = function () {
+          new window.myReviews.VerticalWidget({
+            uuid: "5fd84950-1778-465b-9448-074a752e4353",
+            name: "verticalWidget-1",
+            additionalFrame: "button",
+            variant: "default",
+          }).init()
+        };
+        if (document.readyState === "loading") {
+          document.addEventListener('DOMContentLoaded', function () {
+            myReviewsInit()
+          })
+        } else {
+          myReviewsInit()
+        }
+      </script>
+
+    </div>
+    </body>
+</html>

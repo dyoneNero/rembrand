@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 20px;
+  max-width: 100vw;
+}
+html {
+  scroll-behavior: smooth;
+  width: 100vw;
+}
+
+* {
+  overflow-x: hidden;
+}
+
+body{
+  * {
+    overflow-x: visible;
+  }
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+input:-webkit-autofill {
+  transition: all 5000s ease-in-out;
+}
+
+//Обнулялка
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+:focus,
+:active {
+  /*outline: none;*/
+}
+
+a:focus,
+a:active {
+  /* outline: none;*/
+}
+
+/* Links */
+
+a, a:link, a:visited  {
+  color: inherit;
+  text-decoration: none;
+  display: inline-block;
+}
+
+a:hover  {
+  /* color: inherit; */
+  text-decoration: none;
+}
+
+/* Common */
+
+aside, nav, footer, header, section, main {
+  display: block;
+}
+
+h1, h2, h3, h4, h5, h6, p {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+ul, ul li {
+  list-style: none;
+}
+
+img {
+  vertical-align: top;
+}
+
+img, svg {
+  max-width: 100%;
+  height: auto;
+}
+
+address {
+  font-style: normal;
+}
+
+/* Form */
+
+input, textarea, button, select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  background-color: transparent;
+}
+
+input::-ms-clear {
+  display: none;
+}
+
+button, input[type="submit"] {
+  display: inline-block;
+  box-shadow: none;
+  background-color: transparent;
+  background: none;
+  cursor: pointer;
+}
+
+input:focus, input:active,
+button:focus, button:active {
+  outline: none;
+}
+
+button::-moz-focus-inner {
+  padding: 0;
+  border: 0;
+}
+
+label {
+  cursor: pointer;
+}
+
+legend {
+  display: block;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-size: 18px;
+  font-family: 'Montserrat';
+  font-weight: 400;
+  border: none;
+  user-select: none;
+}
+
+/*Скроллбар кастомный*/
+body::-webkit-scrollbar {
+  width: 15px;
+}
+body::-webkit-scrollbar-track {
+  background: #F5F5F7;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: #c7c7c7;
+  border-radius: 20px;
+  border: 3px solid #F5F5F7;
+}
+
+@media screen and (max-width: 1300px) {
+  body::-webkit-scrollbar {
+    display: none;
+  }
+  body::-webkit-scrollbar-track {
+    display: none;
+  }
+  body::-webkit-scrollbar-thumb {
+    display: none;
+  }
+}
+
+body {
+  overflow-x: hidden;
+}
+
+@media screen and (max-width: 500px) {
+  .myReviews__container {
+    display: none;
+  }
+}

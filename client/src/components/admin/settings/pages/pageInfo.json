@@ -1,0 +1,66 @@
+{
+  "namePage": "Информация",
+  "path": "/info",
+  "changeItemArr": [
+    {
+      "text": "Телефон (шапка)",
+      "name": "headerTel",
+      "maxLength": "20",
+      "type": "text"
+    },
+    {
+      "text": "Заголовок",
+      "name": "mainTitle",
+      "maxLength": "30",
+      "type": "text"
+    },
+    {
+      "text": "Подзаголовок",
+      "name": "mainSubtitle",
+      "maxLength": "150",
+      "type": "text"
+    },
+    {
+      "text": "Слоган",
+      "name": "aboutUsSlogan",
+      "maxLength": "220",
+      "type": "text"
+    },
+    {
+      "text": "Местоположение",
+      "name": "contactLocation",
+      "maxLength": "120",
+      "type": "text"
+    },
+    {
+      "text": "Телефоны",
+      "name": "contactTel",
+      "maxLength": "100",
+      "type": "arr"
+    },
+    {
+      "text": "Копирайт",
+      "name": "copyright",
+      "maxLength": "75",
+      "type": "text"
+    },
+    {
+      "text": "VK",
+      "name": "contactVK",
+      "maxLength": "70",
+      "type": "text"
+    },
+    {
+      "text": "Telegram",
+      "name": "contactTg",
+      "maxLength": "70",
+      "type": "text"
+    },
+    {
+      "text": "WhatsApp",
+      "name": "contactWA",
+      "maxLength": "70",
+      "type": "text"
+    }
+  ]
+}

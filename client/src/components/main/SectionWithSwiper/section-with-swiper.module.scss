@@ -1,0 +1,19 @@
+.swiperSection {
+  width: 100%;
+  min-height: 50vh;
+
+  padding: 100px 0 50px 0;
+
+  h1 {
+    width: 100%;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+
+  .swiperBlock {
+    width: auto;
+    min-height: 500px;
+    position: relative;
+  }
+}

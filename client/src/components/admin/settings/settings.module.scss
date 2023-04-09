@@ -1,0 +1,23 @@
+.settings {
+  width: 90vw;
+  height: 80vh;
+
+  background-color: rgba(0,0,0,0.5);
+}
+
+.settingsNull {
+  width: 100%;
+  height: 74vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  p:first-child {
+    font-size: 35px;
+  }
+  p:last-child {
+    margin-top: 15px;
+    font-size: 25px;
+  }
+}

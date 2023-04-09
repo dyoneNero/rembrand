@@ -1,0 +1,65 @@
+.contactLocationSection {
+  width: 100%;
+  min-height: 50vh;
+
+  padding: 100px 0 50px 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  h1 {
+    width: 100%;
+    font-size: 40px;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+
+  .contactLocationBlock {
+    width: 100%;
+    height: 525px;
+    position: relative;
+
+    background: url("../../../assets/bg.png") no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .contactLocationSection {
+
+    .contactLocationBlock {
+      width: 550px;
+      min-height: 1000px;
+      position: relative;
+
+      background: url("../../../assets/bg_vertical.png") no-repeat 50% 50%;
+      background-size: 100% 100%;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contactLocationSection {
+
+    .contactLocationBlock {
+      width: 100%;
+      min-height: 10vw;
+      height: auto;
+      position: relative;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
+}

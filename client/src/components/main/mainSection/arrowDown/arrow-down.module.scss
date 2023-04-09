@@ -1,0 +1,26 @@
+.arrowDown {
+  width: 100%;
+  height: 55px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+@media screen and (max-height: 700px){
+  .arrowDown {
+    height: 20px;
+    svg {
+      height: 20px;
+    }
+  };
+}
+
+@media screen and (max-width: 500px){
+  .arrowDown {
+    height: 30px;
+    svg {
+      height: 30px;
+    }
+  };
+}

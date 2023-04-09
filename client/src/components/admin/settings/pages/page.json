@@ -1,0 +1,92 @@
+[
+  {
+    "id": 0,
+    "namePage": "Акции и скидки",
+    "path": "/stocks",
+    "typePage": "table-item",
+    "changeItemArr": [
+      {
+        "text": "Наименование",
+        "name": "name",
+        "maxLength": "50",
+        "type": "text"
+      },
+      {
+        "text": "Описание",
+        "name": "description",
+        "maxLength": "100",
+        "type": "text"
+      },
+      {
+        "text": "Картинка",
+        "name": "image",
+        "maxLength": "-",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "namePage": "Услуги",
+    "path": "/services",
+    "typePage": "table-item",
+    "changeItemArr": [
+      {
+        "text": "Наименование",
+        "name": "name",
+        "maxLength": "30",
+        "type": "text"
+      },
+      {
+        "text": "Описание",
+        "name": "description",
+        "maxLength": "100",
+        "type": "text"
+      },
+      {
+        "text": "Картинка",
+        "name": "image",
+        "maxLength": "-",
+        "type": "text"
+      },
+      {
+        "text": "Стоимость",
+        "name": "price",
+        "maxLength": "10",
+        "type": "text"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "namePage": "Наши работы",
+    "path": "/works",
+    "typePage": "table-item",
+    "changeItemArr": [
+      {
+        "text": "Наименование",
+        "name": "name",
+        "maxLength": "150",
+        "type": "text"
+      },
+      {
+        "text": "Видео",
+        "name": "video",
+        "maxLength": "-",
+        "type": "text"
+      },
+      {
+        "text": "Картинки",
+        "name": "image",
+        "maxLength": "-",
+        "type": "arr"
+      },
+      {
+        "text": "Описание",
+        "name": "description",
+        "maxLength": "300",
+        "type": "text"
+      }
+    ]
+  }
+]

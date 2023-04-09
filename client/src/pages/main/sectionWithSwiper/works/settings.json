@@ -1,0 +1,35 @@
+{
+  "name": "Наши работы",
+  "type": "works",
+  "anchor": "works",
+  "swiperSettings": {
+    "spaceBetween": 20,
+    "navigation": {
+      "nextEl": ".next-services",
+      "prevEl": ".prev-services",
+      "disabledClass": "disable-services"
+    },
+    "breakpoints": {
+      "0": {
+        "slidesPerView": 1,
+        "slidesPerGroup": 1
+      },
+      "540": {
+        "slidesPerView": 1,
+        "slidesPerGroup": 1
+      },
+      "810": {
+        "slidesPerView": 1,
+        "slidesPerGroup": 1
+      },
+      "1080": {
+        "slidesPerView": 1,
+        "slidesPerGroup": 1
+      },
+      "1350": {
+        "slidesPerView": 2,
+        "slidesPerGroup": 2
+      }
+    }
+  }
+}

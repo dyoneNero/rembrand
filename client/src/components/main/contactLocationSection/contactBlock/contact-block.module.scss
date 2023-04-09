@@ -1,0 +1,83 @@
+.contactBlock {
+  width: 550px;
+  height: 525px;
+  max-width: 550px;
+  background: rgba(217, 217, 217, 0.5);
+  backdrop-filter: blur(5px);
+
+  padding: 30px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  .contactInfoBlock {
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    p {
+      color: white;
+      font-size: 25px;
+
+      height: auto;
+      margin-bottom: 30px;
+    }
+
+    .telephone {
+      margin: 10px 0;
+
+      display: flex;
+      align-items: center;
+
+      color: white;
+      font-size: 20px;
+
+      div {
+        width: 20px;
+        height: 25px;
+
+        background: url("../../../../assets/phone.svg") no-repeat 50% 50%;
+
+        margin-right: 7px;
+      }
+    }
+
+    .graphic {
+      color: white;
+      font-size: 20px;
+      margin: 10px 0;
+    }
+  }
+
+  .socialBlock {
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    height: 50px;
+    width: 100%;
+    a {
+      margin-left: 25px;
+    }
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .contactBlock {
+    width: 100%;
+    height: 500px;
+    background: rgba(217, 217, 217, 0.5);
+    backdrop-filter: blur(5px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .contactBlock {
+    width: 100%;
+    height: 500px;
+    background: rgba(217, 217, 217, 0.5);
+    backdrop-filter: blur(5px);
+  }
+}
