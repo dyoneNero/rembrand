@@ -18,6 +18,8 @@ const SectionWithSwiper = ({path, setting, name, type, anchor}) => {
 
     const [allWorks, setAllWorks] = useState([])
     const [allStocks, setAllStocks] = useState([])
+    const [stocks, setStocks] = useState(false)
+
 
     const settingSwiper = {
         modules: [Navigation, A11y, Autoplay],
@@ -26,9 +28,11 @@ const SectionWithSwiper = ({path, setting, name, type, anchor}) => {
 
     if (type === 'works') {
         getAllWorks(setAllWorks)
+        setStocks(false)
     }
     else {
         getAllStocks(setAllStocks)
+        setStocks(true)
     }
 
 
@@ -39,18 +43,26 @@ const SectionWithSwiper = ({path, setting, name, type, anchor}) => {
             <div className={style.swiperBlock}>
                 <Swiper {...settingSwiper}>
                     {
-                        type === 'stocks' ?
-                            allStocks && allStocks.map((item) => (
-                                <SwiperSlide>
-                                    <ItemStocks {...item}/>
-                                </SwiperSlide>
-                            ))
+                        stocks ?
+                            <div>
+                                {
+                                    allStocks && allStocks.map((item) => (
+                                        <SwiperSlide>
+                                            <ItemStocks {...item}/>
+                                        </SwiperSlide>
+                                    ))
+                                }
+                            </div>
                             :
-                            allWorks && allWorks.map((item) => (
-                                <SwiperSlide>
-                                    <ItemWorks {...item}/>
-                                </SwiperSlide>
-                            ))
+                            <div>
+                                {
+                                    allWorks && allWorks.map((item) => (
+                                        <SwiperSlide>
+                                            <ItemWorks {...item}/>
+                                        </SwiperSlide>
+                                    ))
+                                }
+                            </div>
                     }
                 </Swiper>
                 <div className={`next-${path}`}></div>
