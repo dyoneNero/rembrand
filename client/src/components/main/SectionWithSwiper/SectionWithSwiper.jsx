@@ -11,9 +11,8 @@ import ItemStocks from "./items/stocks/ItemStocks";
 import ItemWorks from "./items/works/ItemWorks"
 
 import './arrow.scss';
-import {useEffect, useState} from "react";
+import {useState} from "react";
 import {getAllStocks, getAllWorks} from "./service";
-import Works from "../../../pages/works/works";
 
 const SectionWithSwiper = ({path, setting, name, type, anchor}) => {
 
@@ -25,14 +24,14 @@ const SectionWithSwiper = ({path, setting, name, type, anchor}) => {
         ...setting
     }
 
-    useEffect(() => {
-        if (type === 'works') {
-            getAllWorks(setAllWorks)
-        }
-        else if (type === 'stocks') {
-            getAllStocks(setAllStocks)
-        }
-    }, [])
+    if (type === 'works') {
+        getAllWorks(setAllWorks)
+    }
+    else {
+        getAllStocks(setAllStocks)
+    }
+
+
 
     return (
         <section id={anchor} className={style.swiperSection}>
@@ -41,13 +40,13 @@ const SectionWithSwiper = ({path, setting, name, type, anchor}) => {
                 <Swiper {...settingSwiper}>
                     {
                         type === 'stocks' ?
-                            allStocks.map((item) => (
+                            allStocks && allStocks.map((item) => (
                                 <SwiperSlide>
                                     <ItemStocks {...item}/>
                                 </SwiperSlide>
                             ))
                             :
-                            allWorks.map((item) => (
+                            allWorks && allWorks.map((item) => (
                                 <SwiperSlide>
                                     <ItemWorks {...item}/>
                                 </SwiperSlide>
