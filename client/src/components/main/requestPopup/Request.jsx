@@ -94,7 +94,7 @@ const Request = ({showPopupRequest, setShowPopupRequest}) => {
     }
 
     const blurHandler = (e) => {
-        switch (e.target.name) {
+        switch(e.target.name) {
             case 'name':
                 setNameDirty(true)
                 break
@@ -151,8 +151,8 @@ const Request = ({showPopupRequest, setShowPopupRequest}) => {
                             <img src={Phone} alt="" className={style.Image}/>
                         </div>
                     </div>
-                    <button disabled={!formValid} onClick={dataAdd}>Отправить</button>
-                    <div onClick={close} className={style.Cross}></div>
+                    <button disabled={!formValid} onClick={() => dataAdd()}>Отправить</button>
+                    <div onClick={() => close()} className={style.Cross}></div>
                 </animated.div>
             </animated.div>
         );
@@ -163,7 +163,7 @@ const Request = ({showPopupRequest, setShowPopupRequest}) => {
                 <animated.div className={style.requestBlockAccess} style={transformRequestBlock}>
                     <h1>Вы уже оставили заявку</h1>
                     <p>Повторно оставить заявку возможно через 24 часа</p>
-                    <button onClick={close}>Хорошо</button>
+                    <button onClick={() => close()}>Хорошо</button>
                 </animated.div>
             </animated.div>
         )
