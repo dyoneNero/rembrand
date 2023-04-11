@@ -4,7 +4,7 @@ import BackGround from "../../components/main/background/BackGround";
 import style from './main.module.scss'
 
 import MainSection from "../../components/main/mainSection/MainSection";
-// import AboutUs from "../../components/main/aboutUsSection/AboutUs";
+import AboutUs from "../../components/main/aboutUsSection/AboutUs";
 // import SectionWithSwiper from "../../components/main/SectionWithSwiper/SectionWithSwiper";
 // import stocksSettings from './sectionWithSwiper/stocks/settings.json'
 // import worksSettings from './sectionWithSwiper/works/settings.json'
@@ -30,7 +30,7 @@ const MainPage = () => {
             <BackGround/>
             <div className={style.container}>
                 <MainSection mainTitle={info.mainTitle} mainSubtitle={info.mainSubtitle}/>
-                {/*<AboutUs aboutUsSlogan={info.aboutUsSlogan}/>*/}
+                <AboutUs aboutUsSlogan={info.aboutUsSlogan}/>
                 {/*<ServicesSection/>*/}
                 {/*<SectionWithSwiper path='stocks' setting={stocksSettings.swiperSettings} name={stocksSettings.name} type={stocksSettings.type} anchor={stocksSettings.anchor}/>*/}
                 {/*<SectionWithSwiper path='services' setting={worksSettings.swiperSettings} name={worksSettings.name} type={worksSettings.type} anchor={worksSettings.anchor}/>*/}
