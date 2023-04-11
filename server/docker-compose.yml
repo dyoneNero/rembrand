@@ -1,0 +1,15 @@
+version: '3'
+
+services:
+  postgresql:
+    image: postgres
+    container_name: rembrand-psql
+    ports:
+      - '5432:5432'
+    environment:
+      - POSTGRES_HOST=localhost
+      - POSTGRES_USE=postgres
+      - POSTGRES_PASSWORD=05102004666
+      - POSTGRES_DATABASE=remont-site
+    command: postgres
+    restart: always
