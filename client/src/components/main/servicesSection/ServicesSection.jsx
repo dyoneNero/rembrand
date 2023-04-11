@@ -16,9 +16,11 @@ const ServicesSection = () => {
             <h1>Тарифы</h1>
             <div className={style.servicesBlock}>
                 {
-                    allServices && allServices.map((item) => (
-                        <ItemServices {...item}/>
-                    ))
+                    allServices && allServices.map((item) => {
+                        return (
+                            <ItemServices {...item}/>
+                        )
+                    })
                 }
             </div>
         </section>

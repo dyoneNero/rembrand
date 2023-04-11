@@ -19,4 +19,12 @@ export class InfoController {
   async update(@Param('id') id: string, @Body() dto: InfoDto) {
     return this.infoService.update(+id, dto)
   }
+
+  @UsePipes(new ValidationPipe())
+  @HttpCode(200)
+  @Auth()
+  @Post()
+  async create(@Body() dto: InfoDto) {
+    return this.infoService.create(dto)
+  }
 }

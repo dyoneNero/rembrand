@@ -4,22 +4,15 @@ import style from './header-down.module.scss'
 import RequestIcon from '../../../../assets/request.svg'
 import Request from "../../requestPopup/Request";
 
-import {animated, useSpring} from "@react-spring/web";
-
 const HeaderDown = ({shadow}) => {
 
     const [showPopupRequest, setShowPopupRequest] = useState(false)
 
-    const [navAnim, apiNavAnim] = useSpring(() => ({
-        from: {
-            x: 0
-        }
-    }))
-
     useEffect(() => {
         const scrollHandler = () => {
             if (window.pageYOffset >= 100) {
-                const header = document.querySelector('.header-down_headerDown__8qI6Y');
+                const header = document.querySelector('.header-down_headerDown__Uxdhg');
+
                 if (shadow) {
                     header.style.boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
                 }
@@ -28,7 +21,7 @@ const HeaderDown = ({shadow}) => {
                 header.style.backgroundColor = "rgba(255,255,255,0.9)"
             }
             else {
-                const header = document.querySelector('.header-down_headerDown__8qI6Y');
+                const header = document.querySelector('.header-down_headerDown__Uxdhg');
                 header.style.position = 'static'
                 header.style.backgroundColor = "rgba(255,255,255,0.8)"
                 header.style.backdropFilter = 'blur(0)'
@@ -39,7 +32,7 @@ const HeaderDown = ({shadow}) => {
         return () => {
             window.removeEventListener("scroll", scrollHandler);
         };
-    }, []);
+    });
 
     const nav = [
         {
@@ -74,7 +67,7 @@ const HeaderDown = ({shadow}) => {
                 <div className={style.headerDownContainer}>
                     <nav className={style.headerDownNav}>
                         {
-                            nav.map((item, key) => (
+                            nav.map((item) => (
                                 <a href={item.link}>
                                     {item.name}
                                 </a>

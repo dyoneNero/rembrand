@@ -22,4 +22,12 @@ export class InfoService {
 
         return info
     }
+
+    async create(dto: InfoDto) {
+        const info = this.prismaService.info.create({
+            data: dto
+        })
+
+        return info
+    }
 }

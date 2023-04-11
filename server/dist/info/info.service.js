@@ -29,6 +29,12 @@ let InfoService = class InfoService {
         });
         return info;
     }
+    async create(dto) {
+        const info = this.prismaService.info.create({
+            data: dto
+        });
+        return info;
+    }
 };
 InfoService = __decorate([
     (0, common_1.Injectable)(),

@@ -5,4 +5,5 @@ export declare class InfoController {
     constructor(infoService: InfoService);
     getOneInfo(id: string): Promise<import(".prisma/client").Info>;
     update(id: string, dto: InfoDto): Promise<import(".prisma/client").Info>;
+    create(dto: InfoDto): Promise<import(".prisma/client").Info>;
 }

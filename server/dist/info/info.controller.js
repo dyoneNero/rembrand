@@ -27,6 +27,9 @@ let InfoController = class InfoController {
     async update(id, dto) {
         return this.infoService.update(+id, dto);
     }
+    async create(dto) {
+        return this.infoService.create(dto);
+    }
 };
 __decorate([
     (0, common_1.Get)(':id'),
@@ -46,6 +49,16 @@ __decorate([
     __metadata("design:paramtypes", [String, info_dto_1.InfoDto]),
     __metadata("design:returntype", Promise)
 ], InfoController.prototype, "update", null);
+__decorate([
+    (0, common_1.UsePipes)(new common_1.ValidationPipe()),
+    (0, common_1.HttpCode)(200),
+    (0, auth_decorator_1.Auth)(),
+    (0, common_1.Post)(),
+    __param(0, (0, common_1.Body)()),
+    __metadata("design:type", Function),
+    __metadata("design:paramtypes", [info_dto_1.InfoDto]),
+    __metadata("design:returntype", Promise)
+], InfoController.prototype, "create", null);
 InfoController = __decorate([
     (0, common_1.Controller)('info'),
     __metadata("design:paramtypes", [info_service_1.InfoService])
