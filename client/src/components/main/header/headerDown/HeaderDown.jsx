@@ -44,27 +44,27 @@ const HeaderDown = ({shadow}) => {
     const nav = [
         {
             name: "Главная",
-            link: "/#main"
+            link: "/app/#main"
         },
         {
             name: "О нас",
-            link: "/#about-us"
+            link: "/app/#about-us"
         },
         {
             name: "Тарифы",
-            link: "/#services"
+            link: "/app/#services"
         },
         {
             name: "Акции и скидки",
-            link: "/#stocks"
+            link: "/app/#stocks"
         },
         {
             name: "Наши работы",
-            link: "/#works"
+            link: "/app/#works"
         },
         {
             name: "Контакты",
-            link: "/#contacts"
+            link: "/app/#contacts"
         },
     ]
 

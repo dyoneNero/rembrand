@@ -8,8 +8,8 @@ import {Navigate, Route, Routes} from "react-router-dom";
 const App = () => {
     return (
         <Routes>
-            <Route path="/" element={<Main/>}/>
-            <Route path="/works/:id" element={<Works/>}/>
+            <Route path="/app" element={<Main/>}/>
+            <Route path="/app/works/:id" element={<Works/>}/>
             <Route path="/admin" element={<AdminLogin/>}/>
             <Route path='/admin/settings/*' element={<AdminSettings/>}/>
             <Route path='*' element={<Navigate to ="/"/>}/>
