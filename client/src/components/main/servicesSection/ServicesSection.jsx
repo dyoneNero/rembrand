@@ -16,11 +16,7 @@ const ServicesSection = () => {
             <h1>Тарифы</h1>
             <div className={style.servicesBlock}>
                 {
-                    allServices && allServices.map((item) => {
-                        return (
-                            <ItemServices {...item}/>
-                        )
-                    })
+                    allServices && allServices.map((item) => <ItemServices name={item.name} description={item.description} price={item.price} image={item.image}/>)
                 }
             </div>
         </section>
