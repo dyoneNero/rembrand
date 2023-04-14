@@ -6,7 +6,7 @@ import {useNavigate} from "react-router-dom";
 import TableItemRequest from "./TableItemRequest";
 const Page = ({path, namePage}) => {
 
-    const url = `http://localhost:4200/api${path}`
+    const url = `${process.env.REACT_APP_SERVER_URL}${path}`
 
     const [all, setAll] = useState([])
 
