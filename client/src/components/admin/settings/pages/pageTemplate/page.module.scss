@@ -6,39 +6,58 @@
 
   padding: 70px 50px;
 
-  display: flex;
-  justify-content: space-between;
+  h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
 
-  .partTable {
+  .adminPartdf {
+    display: flex;
+    justify-content: space-between;
+    .partTable {
+      height: 500px;
+      overflow-y: auto;
+      overflow-x: hidden;
+      pointer-events: auto;
 
-    h1 {
-      font-size: 30px;
-      margin-bottom: 30px;
-    }
+      &::-webkit-scrollbar {
+        width: 15px;
+      }
+      &::-webkit-scrollbar-track {
+        background: #F5F5F7;
+      }
+      &::-webkit-scrollbar-thumb {
+        background-color: #c7c7c7;
+        border-radius: 20px;
+        border: 3px solid #F5F5F7;
+      }
 
-    div {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
+      div {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
 
-      //Если нужно
-      //.nullTable {
-      //  width: 40vw;
-      //  height: 20vh;
-      //  border: 3px solid white;
-      //  border-radius: 30px;
-      //
-      //  display: flex;
-      //  align-items: center;
-      //  justify-content: center;
-      //
-      //  p {
-      //    font-size: 35px;
-      //    color: white;
-      //  }
-      //}
-    }
+        //Если нужно
+        //.nullTable {
+        //  width: 40vw;
+        //  height: 20vh;
+        //  border: 3px solid white;
+        //  border-radius: 30px;
+        //
+        //  display: flex;
+        //  align-items: center;
+        //  justify-content: center;
+        //
+        //  p {
+        //    font-size: 35px;
+        //    color: white;
+        //  }
+        //}
+      }
+  }
+
+
   }
 
 
@@ -86,8 +105,7 @@
 
 //right-part
 .blockChanges {
-  width: 100%;
-  margin-top: 65px;
+  width: auto;
   height: 45vh;
 
 

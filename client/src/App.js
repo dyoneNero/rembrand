@@ -21,6 +21,9 @@ const router = createBrowserRouter([
     {
         path: "/admin/settings/*",
         element: <AdminSettings/>
+    },
+    {
+
     }
 ])
 
