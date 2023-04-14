@@ -7,6 +7,9 @@ export function addRequest(name, num) {
     axios.post(url,{
         name: name,
         num: num
+    }, {
+        withCredentials: true,
+
     })
         .then(res => {
             setCookieRequest('_request', 'true')
