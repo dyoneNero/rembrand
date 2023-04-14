@@ -3,7 +3,7 @@ import Main from "./pages/main/main";
 import Works from "./pages/works/works";
 import AdminLogin from "./pages/admin/admin-login";
 import AdminSettings from "./pages/admin/admin-settings";
-import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {createBrowserRouter, Navigate, RouterProvider} from "react-router-dom";
 
 const router = createBrowserRouter([
     {
@@ -23,7 +23,8 @@ const router = createBrowserRouter([
         element: <AdminSettings/>
     },
     {
-
+        path: "*",
+        element: <Navigate to="/"/>
     }
 ])
 
