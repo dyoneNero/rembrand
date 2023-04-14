@@ -11,7 +11,7 @@ const HeaderDown = ({shadow}) => {
     useEffect(() => {
         const scrollHandler = () => {
             if (window.pageYOffset >= 100) {
-                const header = document.querySelector('.header-down_headerDown__dnjqP');
+                const header = document.querySelector('#header_down');
 
                 if (shadow) {
                     header.style.boxShadow="0px 4px 4px rgba(0, 0, 0, 0.25)"
@@ -21,7 +21,7 @@ const HeaderDown = ({shadow}) => {
                 header.style.backgroundColor = "rgba(255,255,255,0.9)"
             }
             else {
-                const header = document.querySelector('.header-down_headerDown__dnjqP');
+                const header = document.querySelector('#header_down');
                 header.style.position = 'static'
                 header.style.backgroundColor = "rgba(255,255,255,0.8)"
                 header.style.backdropFilter = 'blur(0)'
@@ -63,7 +63,7 @@ const HeaderDown = ({shadow}) => {
 
     return (
         <>
-            <header className={style.headerDown}>
+            <header id="header_down" className={style.headerDown}>
                 <div className={style.headerDownContainer}>
                     <nav className={style.headerDownNav}>
                         {

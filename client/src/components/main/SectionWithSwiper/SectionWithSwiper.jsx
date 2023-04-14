@@ -42,7 +42,7 @@ const SectionWithSwiper = ({path, setting, name, type, anchor}) => {
         <section id={anchor} className={style.swiperSection}>
             <h1>{name}</h1>
             <div className={style.swiperBlock}>
-                <Swiper {...settingSwiper}>
+                <Swiper {...settingSwiper} className={style.swiper}>
                     {
                         stocks ?
                             <div>
