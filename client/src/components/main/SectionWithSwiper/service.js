@@ -2,20 +2,22 @@ import axios from "axios";
 
 const url = process.env.REACT_APP_SERVER_URL
 
-export function getAllWorks(setAllWorks) {
+export const getAllWorks = async (setAllWorks) => {
     axios.get(`${url}/works`)
         .then(res => {
-            setAllWorks(res.data)
+            const response = res.data
+            setAllWorks(response)
         })
         .catch(err => {
             console.log(err)
         })
 }
 
-export function getAllStocks(setAllStocks) {
+export const getAllStocks = (setAllStocks) => {
     axios.get(`${url}/stocks`)
         .then(res => {
-            setAllStocks(res.data)
+            const response = res.data
+            setAllStocks(response)
         })
         .catch(err => {
             console.log(err)

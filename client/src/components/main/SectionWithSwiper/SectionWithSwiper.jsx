@@ -11,7 +11,7 @@ import ItemStocks from "./items/stocks/ItemStocks";
 import ItemWorks from "./items/works/ItemWorks"
 
 import './arrow.scss';
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {getAllStocks, getAllWorks} from "./service";
 
 const SectionWithSwiper = ({path, setting, name, type, anchor}) => {
@@ -26,15 +26,16 @@ const SectionWithSwiper = ({path, setting, name, type, anchor}) => {
         ...setting
     }
 
-    if (type === 'works') {
-        getAllWorks(setAllWorks)
-        setStocks(false)
-    }
-    else {
-        getAllStocks(setAllStocks)
-        setStocks(true)
-    }
-
+    useEffect(() => {
+        if (type === 'works') {
+            getAllWorks(setAllWorks)
+            setStocks(false)
+        }
+        else {
+            getAllStocks(setAllStocks)
+            setStocks(true)
+        }
+    }, [])
 
 
     return (

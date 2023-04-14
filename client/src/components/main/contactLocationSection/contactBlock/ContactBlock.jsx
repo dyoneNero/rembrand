@@ -4,8 +4,7 @@ import style from './contact-block.module.scss'
 import Vk from "../../../../assets/vk.svg"
 import Tg from "../../../../assets/tg.svg"
 import Wa from "../../../../assets/wa.svg"
-import ItemContact from "./ItemContact";
-import {getInfo} from "../../../../pages/main/service";
+import ItemContact from "./ItemContact"
 import axios from "axios";
 
 const ContactBlock = () => {
@@ -33,11 +32,7 @@ const ContactBlock = () => {
                 <p>{info.contactLocation}</p>
                 <div>
                     {
-                        contactTel.length > 0
-                            ?
-                            (contactTel.map(item => <ItemContact contactTel={item}/>))
-                            :
-                            (<p></p>)
+                        contactTel ? (contactTel.map(item => <ItemContact contactTel={item}/>)) : (<p></p>)
                     }
                 </div>
             </div>
