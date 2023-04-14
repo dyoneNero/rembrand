@@ -8,7 +8,7 @@ const BlockInfo = ({mainTitle, mainSubtitle}) => {
                 <h1>{mainTitle}</h1>
                 <h2>{mainSubtitle}</h2>
             </div>
-            <button>ОФОРМИТЬ ЗАКАЗыы</button>
+            <button>ОФОРМИТЬ ЗАКАЗ</button>
         </div>
     );
 };
