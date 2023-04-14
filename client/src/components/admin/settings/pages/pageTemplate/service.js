@@ -22,6 +22,7 @@ export function getAccessRoute(setAccessRoute) {
 }
 
 export function getAll(setAll, url) {
+
     axios.get(url)
         .then(res => {
             setAll(res.data)

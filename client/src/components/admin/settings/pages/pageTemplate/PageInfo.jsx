@@ -11,7 +11,7 @@ import {useNavigate} from "react-router-dom";
 
 const Page = ({path, namePage, changeItemArr}) => {
 
-    const url = `http://localhost:4200/api${path}`
+    const url = `${process.env.REACT_APP_SERVER_URL}${path}`
 
     const [one, setOne] = useState({})
 
