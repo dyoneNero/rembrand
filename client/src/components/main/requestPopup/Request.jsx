@@ -7,8 +7,10 @@ import User from '../../../assets/user.svg'
 import {animated, useSpring} from "@react-spring/web";
 import getCookie from "../../cookies/getCookie";
 import {addRequest} from "./service";
+import setCookie from "../../cookies/setCookie";
+import {useCookies} from "react-cookie";
 
-const Request = ({showPopupRequest, setShowPopupRequest}) => {
+const Request = () => {
 
     const [name, setName] = useState('')
     const [num, setNum] = useState('')
@@ -17,6 +19,9 @@ const Request = ({showPopupRequest, setShowPopupRequest}) => {
     const [nameError, setNameError] = useState('Поле не может быть пустым')
     const [numError, setNumError] = useState('Поле не может быть пустым')
     const [formValid, setFormValid] = useState(false)
+
+    const [cookies, setCookies] = useCookies(['_request_open'])
+    const [isOpen, setIsOpen] = useState(false)
 
     const dataAdd = () => {
         close()
@@ -38,7 +43,7 @@ const Request = ({showPopupRequest, setShowPopupRequest}) => {
     }))
 
     const open = () => {
-        const bodyScroll = document.querySelector('*')
+        const bodyScroll = document.querySelector('#body')
         const review = document.querySelector('.myReviews__container')
 
         apiBlock.start({
@@ -66,7 +71,7 @@ const Request = ({showPopupRequest, setShowPopupRequest}) => {
 
 
     const close = () => {
-        const bodyScroll = document.querySelector('*')
+        const bodyScroll = document.querySelector('#body')
         const review = document.querySelector('.myReviews__container')
 
         apiBlock.start({
@@ -77,8 +82,9 @@ const Request = ({showPopupRequest, setShowPopupRequest}) => {
             config: {
                 duration: 400
             },
-            onRest: () => setShowPopupRequest(false)
+            onRest: () => setCookies("_request_open", "false")
         })
+
 
         apiPopup.start({
             to: {
@@ -133,31 +139,39 @@ const Request = ({showPopupRequest, setShowPopupRequest}) => {
         }
     }, [nameError, numError])
 
-    if (showPopupRequest && getCookie('_request') !== 'true') {
-        open()
+    useEffect(() => {
+        if(cookies._request_open === "true") {
+            open()
+            setIsOpen(true)
+        }
+        else if(cookies._request_open === "false"){
+            setIsOpen(false)
+        }
+    }, [cookies])
+
+    if (isOpen && getCookie('_request') !== 'true') {
         return (
             <animated.div className={style.requestPopup} style={transformRequestPopup}>
                 <animated.div className={style.requestBlock} style={transformRequestBlock}>
-                    <h1>Оставить заявку</h1>
-                    <div>
+                    <h1 className={style.requestTitle}>Оставить заявку</h1>
+                    <div className={style.blockInput}>
                         {(nameDirty && nameError) && <div style={{color: "#8b0000", fontSize: "15px"}}>{nameError}</div>}
                         <div className={style.requestInput}>
-                            <input onChange={e => nameHandler(e)} value={name} onBlur={e => blurHandler(e)} type="text" name='name' placeholder='Ваше имя'/>
+                            <input className={style.inputRequest} onChange={e => nameHandler(e)} value={name} onBlur={e => blurHandler(e)} type="text" name='name' placeholder='Ваше имя'/>
                             <img src={User} alt="" className={style.Image}/>
                         </div>
                         {(numDirty && numError) && <div style={{color: "#8b0000", fontSize: "15px"}}>{numError}</div>}
                         <div className={style.requestInput}>
-                            <input onChange={e => numHandler(e)} value={num} onBlur={e => blurHandler(e)} type="tel" name='num' placeholder='Номер телефона'/>
+                            <input className={style.inputRequest} onChange={e => numHandler(e)} value={num} onBlur={e => blurHandler(e)} type="tel" name='num' placeholder='Номер телефона'/>
                             <img src={Phone} alt="" className={style.Image}/>
                         </div>
                     </div>
-                    <button disabled={!formValid} onClick={() => dataAdd()}>Отправить</button>
+                    <button className={style.buttonRequest} disabled={!formValid} onClick={() => dataAdd()}>Отправить</button>
                     <div onClick={() => close()} className={style.Cross}></div>
                 </animated.div>
             </animated.div>
         );
-    }else if (showPopupRequest && getCookie('_request') === 'true'){
-        open()
+    }else if (isOpen && getCookie('_request') === 'true'){
         return (
             <animated.div className={style.requestPopup} style={transformRequestPopup}>
                 <animated.div className={style.requestBlockAccess} style={transformRequestBlock}>

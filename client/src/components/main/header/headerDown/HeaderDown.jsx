@@ -1,12 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React, {useEffect} from 'react';
 import style from './header-down.module.scss'
 
 import RequestIcon from '../../../../assets/request.svg'
-import Request from "../../requestPopup/Request";
+import setCookieRequest from "../../../cookies/setCookieRequest";
+import {useCookies} from "react-cookie";
 
 const HeaderDown = ({shadow}) => {
 
-    const [showPopupRequest, setShowPopupRequest] = useState(false)
+
+    const [cookies, setCookies] = useCookies(['_request_open'])
 
     useEffect(() => {
         const scrollHandler = () => {
@@ -73,15 +75,13 @@ const HeaderDown = ({shadow}) => {
                                 </a>
                             ))
                         }
-
                     </nav>
-                    <button onClick={() => setShowPopupRequest(true)}>
+                    <button onClick={() => setCookies('_request_open', 'true')}>
                         <img src={RequestIcon} alt=""/>
                         <p>Оставить заявку</p>
                     </button>
                 </div>
             </header>
-            <Request showPopupRequest={showPopupRequest} setShowPopupRequest={setShowPopupRequest}/>
         </>
 
     );

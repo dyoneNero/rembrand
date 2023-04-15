@@ -1,8 +1,10 @@
-import React, {useState} from 'react';
+import React from 'react';
 import style from './item-services.module.scss'
-import Request from "../../requestPopup/Request";
+import {useCookies} from "react-cookie";
 
 const ItemServices = ({name,description,price, image}) => {
+
+    const [cookies, setCookies] = useCookies(['_request_open'])
 
     return (
         <div className={style.itemServices}>
@@ -16,7 +18,7 @@ const ItemServices = ({name,description,price, image}) => {
                     <p>{price}
                         {/*<span>за м²</span>*/}
                     </p>
-                    <button>Подробнее</button>
+                    <button onClick={() => setCookies('_request_open', 'true')}>Подробнее</button>
                 </div>
             </div>
         </div>

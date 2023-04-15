@@ -15,6 +15,7 @@ import Footer from "../../components/main/footer/Footer";
 import Header from "../../components/main/header/Header";
 
 import {getInfo} from "./service";
+import Request from "../../components/main/requestPopup/Request";
 
 
 const MainPage = () => {
@@ -41,6 +42,7 @@ const MainPage = () => {
                 <ContactLocationSection/>
             </div>
             <Footer copyright={info.copyright}/>
+            <Request/>
         </div>
     );
 };

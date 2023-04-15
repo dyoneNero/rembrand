@@ -8,7 +8,7 @@ const ItemWorks = ({id, name, image}) => {
         <>
             <div className={style.itemWorks}>
                 <div className={style.itemWorksContent}>
-                    <div style={{ backgroundImage: 'url(' + image + ')'}}></div>
+                    <div style={{ backgroundImage: 'url(' + image[0] + ')'}}></div>
                     <h1>{name}</h1>
                 </div>
                 <Link to={`/works/${id}`}>Подробнее</Link>

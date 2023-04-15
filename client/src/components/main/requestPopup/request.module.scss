@@ -3,6 +3,9 @@
   top: 0;
   left: 0;
 
+  padding: 0;
+  margin: 0;
+
   width: 100vw;
   height: 100vh;
 
@@ -13,6 +16,8 @@
   display: flex;
   align-items: center;
   justify-content: center;
+
+  color: black;
 
   .Cross {
     cursor: pointer;
@@ -42,12 +47,12 @@
 
     padding: 40px 60px;
 
-    h1 {
+    .requestTitle {
       font-weight: 500;
       font-size: 25px;
     }
 
-    div {
+    .blockInput {
       width: 100%;
       .requestInput {
         position: relative;
@@ -71,13 +76,7 @@
           right: 15px;
         }
 
-        p {
-          position: absolute;
-          top: 4px;
-          left: 15px;
-        }
-
-        input {
+        .inputRequest {
           pointer-events: auto;
           cursor: pointer;
           width: 100%;
@@ -94,7 +93,7 @@
     }
     pointer-events: none;
 
-    button {
+    .buttonRequest {
       padding: 15px 35px;
 
       border-radius: 100px;
@@ -123,6 +122,7 @@
     padding: 40px 60px;
 
     h1 {
+      margin-bottom: 0;
       font-weight: 500;
       font-size: 25px;
 
