@@ -10,6 +10,8 @@ import {addRequest} from "./service";
 import setCookie from "../../cookies/setCookie";
 import {useCookies} from "react-cookie";
 
+import Cross from '../../../assets/cross.svg'
+
 const Request = () => {
 
     const [name, setName] = useState('')
@@ -167,7 +169,7 @@ const Request = () => {
                         </div>
                     </div>
                     <button className={style.buttonRequest} disabled={!formValid} onClick={() => dataAdd()}>Отправить</button>
-                    <div onClick={() => close()} className={style.Cross}></div>
+                    <div onClick={() => close()} className={style.Cross} image={Cross}></div>
                 </animated.div>
             </animated.div>
         );

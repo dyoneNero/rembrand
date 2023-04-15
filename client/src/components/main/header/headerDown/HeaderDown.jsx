@@ -2,7 +2,6 @@ import React, {useEffect} from 'react';
 import style from './header-down.module.scss'
 
 import RequestIcon from '../../../../assets/request.svg'
-import setCookieRequest from "../../../cookies/setCookieRequest";
 import {useCookies} from "react-cookie";
 
 const HeaderDown = ({shadow}) => {
