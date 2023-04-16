@@ -7,7 +7,6 @@ import User from '../../../assets/user.svg'
 import {animated, useSpring} from "@react-spring/web";
 import getCookie from "../../cookies/getCookie";
 import {addRequest} from "./service";
-import setCookie from "../../cookies/setCookie";
 import {useCookies} from "react-cookie";
 
 import Cross from '../../../assets/cross.svg'
@@ -45,7 +44,7 @@ const Request = () => {
     }))
 
     const open = () => {
-        const bodyScroll = document.querySelector('#body')
+        const bodyScroll = document.querySelector('body')
         const review = document.querySelector('.myReviews__container')
 
         apiBlock.start({
@@ -67,13 +66,14 @@ const Request = () => {
             },
         })
 
-        bodyScroll.style.overflowY = 'hidden'
+        bodyScroll.style.position = 'fixed'
+        bodyScroll.style.overflowX = 'hidden'
         review.style.display = 'none'
     }
 
 
     const close = () => {
-        const bodyScroll = document.querySelector('#body')
+        const bodyScroll = document.querySelector('body')
         const review = document.querySelector('.myReviews__container')
 
         apiBlock.start({
@@ -97,6 +97,7 @@ const Request = () => {
             },
         })
 
+        bodyScroll.style.position = 'static'
         bodyScroll.style.overflowY = 'visible'
         review.style.display = 'flex'
     }
@@ -173,7 +174,8 @@ const Request = () => {
                 </animated.div>
             </animated.div>
         );
-    }else if (isOpen && getCookie('_request') === 'true'){
+    }
+    else if (isOpen && getCookie('_request') === 'true'){
         return (
             <animated.div className={style.requestPopup} style={transformRequestPopup}>
                 <animated.div className={style.requestBlockAccess} style={transformRequestBlock}>
