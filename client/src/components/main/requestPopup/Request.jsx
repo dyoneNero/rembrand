@@ -44,7 +44,7 @@ const Request = () => {
     }))
 
     const open = () => {
-        const bodyScroll = document.querySelector('body')
+        const html = document.querySelector('html')
         const review = document.querySelector('.myReviews__container')
 
         apiBlock.start({
@@ -66,14 +66,13 @@ const Request = () => {
             },
         })
 
-        bodyScroll.style.position = 'fixed'
-        bodyScroll.style.overflowX = 'hidden'
+        html.style.overflowY = 'hidden'
         review.style.display = 'none'
     }
 
 
     const close = () => {
-        const bodyScroll = document.querySelector('body')
+        const html = document.querySelector('html')
         const review = document.querySelector('.myReviews__container')
 
         apiBlock.start({
@@ -97,8 +96,7 @@ const Request = () => {
             },
         })
 
-        bodyScroll.style.position = 'static'
-        bodyScroll.style.overflowY = 'visible'
+        html.style.overflowY = 'visible'
         review.style.display = 'flex'
     }
 
